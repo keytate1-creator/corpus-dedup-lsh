@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "corpus-dedup-lsh"
+version = "0.1.0"
+authors = [
+  { name="Kaylor Tate Cespedes", email="kaylortate@users.noreply.github.com" },
+]
+description = "High-Performance MinHash LSH Deduplication Engine for LLM Pretraining & SFT Corpora"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "flake8>=6.0.0",
+]
+
+[project.scripts]
+corpus-dedup = "dedup_core.cli:main"
